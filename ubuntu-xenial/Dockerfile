@@ -27,4 +27,3 @@ WORKDIR /home/webos
 RUN mkdir mpoint
 WORKDIR /home/webos/mpoint
 
-USER root
