@@ -9,7 +9,7 @@ Currently, WebOS image build system is depended on Ubuntu. Linux users who usual
 # Tutorial
 ### 0. Clone the repository
 ```
-$ git clone https://github.com/memnoth-projects/dockerize-build-system.git
+$ git clone https://github.com/webosce/dockerize-build-system.git
 
 $ cd dockerize-build-system
 ```
@@ -37,7 +37,7 @@ $ su webos; cd
 
 To clone ``build-webos``,
 ```
-$ sudo git clone https://github.com/webosose/build-webos.git
+$ sudo git clone https://github.com/webosce/build-webos.git
 ```
 
 To let **webos** be able to read/write files, chown it.
