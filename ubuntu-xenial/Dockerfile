@@ -10,20 +10,13 @@ MAINTAINER Yi-Soo An <yisooan@gmail.com>
 # Consider uncommenting for Korea
 # RUN sed -i "s/archive.ubuntu.com/mirror.kakao.com/g" /etc/apt/sources.list
 
-RUN apt-get update
-RUN apt-get upgrade -y
-RUN apt-get install -y git sudo vim-common
-
-# Add an user named webos
-RUN useradd -m webos
-
-# Add sudo permission
-RUN touch /etc/sudoers.d/webos
-RUN echo "webos ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/webos
+RUN apt-get update && \
+    apt-get upgrade -y && \
+    apt-get install -y git sudo vim-common && \
+    useradd -m webos && \
+    touch /etc/sudoers.d/webos && \
+    echo "webos ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/webos && \
+    mkdir -p /home/webos/mpoint
 
 USER webos
-WORKDIR /home/webos
-
-RUN mkdir mpoint
 WORKDIR /home/webos/mpoint
-
